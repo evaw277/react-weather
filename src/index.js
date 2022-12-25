@@ -1,15 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Weather from "./Weather";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
-    <Weather />
+    <div className="container">
+      <Weather />
+      <br />
+      <p>
+        <a
+          href="https://github.com/evaw277/react-weather"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open-source code
+        </a>
+        , by Eva Weisneck
+      </p>
+    </div>
   </React.StrictMode>
 );
 
