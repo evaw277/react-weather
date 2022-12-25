@@ -5,3 +5,6 @@
   border-radius: 4px;
   box-shadow: 0px 1px 1px;
 }
+li {
+  text-decoration: none;
+}
