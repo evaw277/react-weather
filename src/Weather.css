@@ -1,10 +1,13 @@
 .Weather {
   border: solid black 1px;
   padding: 30px 50px;
-  margin-top: 80px;
   border-radius: 4px;
   box-shadow: 0px 1px 1px;
 }
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+}
 li {
-  text-decoration: none;
+  list-style: none;
 }
