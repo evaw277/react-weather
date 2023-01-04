@@ -1,12 +1,15 @@
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+}
 .Weather {
   border: solid black 1px;
   padding: 30px 50px;
   border-radius: 4px;
   box-shadow: 0px 1px 1px;
 }
-.container {
-  max-width: 800px;
-  margin: 80px auto;
+.Weather h1 {
+  font-size: 40px;
 }
 li {
   list-style: none;

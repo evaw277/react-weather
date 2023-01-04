@@ -1,27 +1,28 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormatDate from "./FormatDate";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       city: response.data.city,
       temperature: response.data.temperature.current,
-      date: "Tuesday 10:00",
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
-      imgUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      imgUrl: response.data.condition.icon_url,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
     });
+    console.log(response.data);
   }
 
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <h1 className="date">{weatherData.date}</h1>
+        <FormatDate date={weatherData.date} />
 
         <form className="mb-3">
           <div className="row">
@@ -43,11 +44,11 @@ export default function Weather() {
         </form>
 
         <div className="row city-info">
-          <div className="col-6">
-            <h2>{weatherData.city}</h2>
+          <div className="col-9">
+            <h1>{weatherData.city}</h1>
             <h3>{Math.round(weatherData.temperature)} F°</h3>
           </div>
-          <div className="col-6">
+          <div className="col-3">
             <img src={weatherData.imgUrl} alt="icon" />
           </div>
           <ul>
