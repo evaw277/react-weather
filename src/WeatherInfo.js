@@ -1,5 +1,7 @@
 import React from "react";
 import WeatherTemperature from "./WeatherTemperature";
+import "./Weather.css";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -18,6 +20,7 @@ export default function WeatherInfo(props) {
           <li>Humidity: {props.data.humidity}%</li>
         </ul>
       </div>
+      <WeatherForecast />
     </div>
   );
 }

@@ -11,6 +11,16 @@
 .Weather h1 {
   font-size: 40px;
 }
+.forecast {
+  text-align: center;
+}
+.forecast-temp-high {
+  margin-right: 14px;
+}
+.forecast-temp-low {
+  opacity: 0.6;
+}
+
 li {
   list-style: none;
 }
