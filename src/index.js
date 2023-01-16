@@ -12,7 +12,7 @@ root.render(
     <div className="container">
       <Weather defaultCity="New York" />
       <br />
-      <p>
+      <p className="footer">
         <a
           href="https://github.com/evaw277/react-weather"
           target="_blank"
