@@ -25,6 +25,16 @@
   margin: 0 auto;
   max-width: 800px;
 }
+.city-info {
+  text-align: center;
+}
+.main-temperature {
+  font-size: 50px;
+  font-weight: 400;
+}
+.WeatherInfo {
+  margin-bottom: 30px;
+}
 li {
   list-style: none;
 }
